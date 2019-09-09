@@ -51,7 +51,16 @@ public class WebRequestController_Weather : MonoBehaviour
         }
     }
 
+
     string createWeatherInfoString(string xmlResult) {
+        /*
+        sample output:
+
+        2019.09.09
+        26.0ºC
+        Rain
+        
+         */
         string weatherInfo = "";
 
         XmlDocument xmlDocument = new XmlDocument();
@@ -94,7 +103,6 @@ public class WebRequestController_Weather : MonoBehaviour
         } else {
             weatherInfo += "No SkyCondition info\n";
         }
-
 
         return weatherInfo;
     }
