@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Doirama.unity
+    guid: cb689c3a788618e46bfdccf3f80f9cfe
   m_configObjects: {}
