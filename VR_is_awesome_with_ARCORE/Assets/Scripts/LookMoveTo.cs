@@ -1,16 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LookMoveTo : MonoBehaviour
 {
     public GameObject ground;
     public Transform camera;
+    public Transform infoBubble;
+
+    private Text infoText;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        if (infoBubble != null)
+        {
+            infoText = infoBubble.Find("Text").GetComponent<Text>();
+        }
         
     }
 
@@ -34,7 +41,14 @@ public class LookMoveTo : MonoBehaviour
             hitObject = hit.collider.gameObject;
             if (hitObject == ground)
             {
-                Debug.Log("Hit (x,y,z): " + hit.point.ToString("F2"));
+                if(infoBubble != null)
+                {
+                    infoText.text = "X:" + hit.point.x.ToString("F2") + ", Z:" +
+                        hit.point.y.ToString("F2");
+                    infoBubble.LookAt(camera.position);
+                    infoBubble.Rotate(0.0f, 180.0f, 0.0f);
+                }
+                //Debug.Log("Hit (x,y,z): " + hit.point.ToString("F2"));
                 transform.position = hit.point;
             }
 
