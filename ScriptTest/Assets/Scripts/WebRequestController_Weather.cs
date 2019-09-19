@@ -47,19 +47,28 @@ public class WebRequestController_Weather : MonoBehaviour
     IEnumerator WebRequest()  {
 
         UnityWebRequest request = new UnityWebRequest();
-        using (request = UnityWebRequest.Get("https://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1165066000"))
+        using (request = UnityWebRequest.Get("http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1165066000"))
         {
             yield return request.SendWebRequest();
             if (request.isNetworkError)
             {
                 Debug.Log(request.error);
                 WeatherText.text = "Network Error + " + request.error;  // "Unknown Error"
-                /*
+/*
+STEP1. 
+1) "Temp" 폴더가 생성되어 있을텐데 거길 가만히 보면 "StagingArea"라는 폴더에서
+2) AndroidManifest.xml 파일과 res 폴더를 선택해서 CTRL+C 해서 복사하고 
+3) 유니티로 돌아와서 "Plugins" 폴더를 만든다음 다시 "Android"폴더를 만들고 거기에 복사해 넣자.
 
-빌드에서 사용될 각종 Resource 파일들이 보일텐데 이중에 필요한건 
-AndroidManifest.xml 파일과 res 폴더 두개이다. 이 2개를 선택해서 CTRL+C 해서 복사하고 
-유니티로 돌아와서 "Plugins" 폴더를 만든다음 다시 "Android"폴더를 만들고 거기에 복사해 넣자.
-                 */
+STEP2.
+androidManifest.xml 에서 application 에 아래의 속성 추가
+
+<manifest ...>
+    ...
+    <application
+        ...
+        android:usesCleartextTraffic="true"
+ */
             }
             else
             {
