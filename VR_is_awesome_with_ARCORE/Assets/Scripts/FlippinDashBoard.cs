@@ -38,7 +38,7 @@ public class FlippinDashBoard : MonoBehaviour
         if (!isOpen)
         {
             dashboard.transform.eulerAngles = startRotation;
-            isOpen = false;
+            isOpen = true;
         }
     }
 
