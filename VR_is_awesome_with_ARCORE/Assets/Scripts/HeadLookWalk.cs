@@ -8,6 +8,8 @@ public class HeadLookWalk : MonoBehaviour
     public float velocity = 0.7f;
     public Transform arCamera;
     private CharacterController controller;
+    public bool isWalking = false;
+    private Clicker clicker = new Clicker();
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,14 @@ public class HeadLookWalk : MonoBehaviour
         moveDirection.y = 0.0f;
         controller.Move(moveDirection);
         */
-        controller.SimpleMove(arCamera.forward * velocity);
+        if(clicker.clicked())
+        {
+            isWalking = !isWalking;
+        }
+        if(isWalking)
+        {
+            controller.SimpleMove(arCamera.forward * velocity);
+        }
+        
     }
 }

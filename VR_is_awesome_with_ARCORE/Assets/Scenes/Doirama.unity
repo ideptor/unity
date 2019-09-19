@@ -264,6 +264,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4497055787654456, guid: c10877f7cd5764de18d46d7b777d1faa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c10877f7cd5764de18d46d7b777d1faa, type: 3}
 --- !u!1 &112345482
@@ -614,6 +618,7 @@ GameObject:
   - component: {fileID: 232637119}
   - component: {fileID: 232637120}
   - component: {fileID: 232637121}
+  - component: {fileID: 232637122}
   m_Layer: 0
   m_Name: MeMySelfEye
   m_TagString: Untagged
@@ -629,7 +634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232637118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: -4}
+  m_LocalPosition: {x: 0, y: 1.08, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 434387102}
@@ -653,6 +658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 0.7
   arCamera: {fileID: 1498663086}
+  isWalking: 0
 --- !u!143 &232637121
 CharacterController:
   m_ObjectHideFlags: 0
@@ -671,6 +677,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &232637122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232637118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd62c6fbc2dd60498ec7db95d01949b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &240717346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,7 +1949,7 @@ PrefabInstance:
     - target: {fileID: 6066745166337866646, guid: c76b51f752777224c9cb8a1319cf8514,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.76
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6066745166337866646, guid: c76b51f752777224c9cb8a1319cf8514,
         type: 3}
