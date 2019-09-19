@@ -8,8 +8,12 @@ public class HeadGesture : MonoBehaviour
 {
 
     public bool isFacingDown = false;
-    public Transform arcamera;
+    public bool isMovingDown = false;
 
+    private float sweepRate = 100.0f;
+    private float previousCameraAngle;
+
+    public Transform arcamera;
     private Text angleDisplay;
 
 
@@ -23,11 +27,12 @@ public class HeadGesture : MonoBehaviour
     void Update()
     {
         isFacingDown = DetectFacingDown();
+        isMovingDown = DetectMovingDown();
     }
 
     private bool DetectFacingDown()
     {
-        return (CameraAngleFromGround() < 40.0f);
+        return (CameraAngleFromGround() < 70.0f);
     }
 
     private float CameraAngleFromGround()
@@ -38,5 +43,15 @@ public class HeadGesture : MonoBehaviour
             angleDisplay.text = "HeadAngle: " + angle.ToString("F2");
         }
         return angle;
+    }
+
+    private bool DetectMovingDown()
+    {
+        float angle = CameraAngleFromGround();
+        float deltaAngle = previousCameraAngle - angle;
+        float rate = deltaAngle / Time.deltaTime;
+        previousCameraAngle = angle;
+
+        return (rate >= sweepRate);
     }
 }

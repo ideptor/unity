@@ -10,6 +10,9 @@ public class FlippinDashBoard : MonoBehaviour
     private bool isOpen = true;
     private Vector3 startRotation;
 
+    private float timer = 0.0f;
+    private float timerReset = 2.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +27,21 @@ public class FlippinDashBoard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gesture.isFacingDown)
+
+        //if(gesture.isFacingDown)
+        if(gesture.isMovingDown)
         {
             OpenDashboard();
+        } else if(!gesture.isFacingDown)
+        {
+            timer -= Time.deltaTime;
+            if(timer <= 0.0f)
+            {
+                CloseDashboard();
+            }            
         } else
         {
-            CloseDashboard();
+            timer = timerReset;
         }
     }
 
@@ -46,7 +58,7 @@ public class FlippinDashBoard : MonoBehaviour
     {
         if (isOpen)
         {
-            dashboard.transform.eulerAngles = new Vector3(180.0f, startRotation.y, startRotation.z);
+            dashboard.transform.eulerAngles = new Vector3(115.0f, startRotation.y, startRotation.z);
             isOpen = false;
         }
     }

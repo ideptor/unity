@@ -1118,6 +1118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingDown: 0
+  isMovingDown: 0
   arcamera: {fileID: 1498663086}
 --- !u!1 &473318346
 GameObject:
@@ -1841,7 +1842,7 @@ PrefabInstance:
     - target: {fileID: 6066745166337866646, guid: c76b51f752777224c9cb8a1319cf8514,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.67
+      value: 1.62
       objectReference: {fileID: 0}
     - target: {fileID: 6066745166337866646, guid: c76b51f752777224c9cb8a1319cf8514,
         type: 3}
@@ -1891,7 +1892,7 @@ PrefabInstance:
     - target: {fileID: 6066745166337866646, guid: c76b51f752777224c9cb8a1319cf8514,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.73
+      value: -0.76
       objectReference: {fileID: 0}
     - target: {fileID: 6066745166337866646, guid: c76b51f752777224c9cb8a1319cf8514,
         type: 3}
@@ -7043,7 +7044,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264612161}
-  m_LocalRotation: {x: -0.5, y: -0, z: -0, w: 0.8660254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
