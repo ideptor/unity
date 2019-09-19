@@ -7,7 +7,7 @@ public class HeadGesture : MonoBehaviour
 {
 
     public bool isFacingDown = false;
-    public Transform camera;
+    public Transform arcamera;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,6 @@ public class HeadGesture : MonoBehaviour
 
     private float CameraAngleFromGround()
     {
-        return Vector3.Angle(Vector3.down, camera.rotation * Vector3.forward);
+        return Vector3.Angle(Vector3.down, arcamera.rotation * Vector3.forward);
     }
 }

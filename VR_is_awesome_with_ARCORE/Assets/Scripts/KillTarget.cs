@@ -11,7 +11,7 @@ public class KillTarget : MonoBehaviour
     public GameObject killEffect;
     public float timeToSelect = 3.0f;
     public int score;
-    public Transform camera;
+    public Transform arCamera;
     public Text scoreText;
 
     private float countDown;
@@ -28,7 +28,7 @@ public class KillTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ray ray = new Ray(camera.position, camera.rotation * Vector3.forward);
+        Ray ray = new Ray(arCamera.position, arCamera.rotation * Vector3.forward);
         RaycastHit hit;
 
         if(Physics.Raycast(ray, out hit) && (hit.collider.gameObject == target))

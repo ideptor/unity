@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class CursorPosioner : MonoBehaviour
 {
     private float defaultPosZ;
-    public Transform camera;
+    public Transform arCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class CursorPosioner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ray ray = new Ray(camera.position, camera.rotation * Vector3.forward);
+        Ray ray = new Ray(arCamera.position, arCamera.rotation * Vector3.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
