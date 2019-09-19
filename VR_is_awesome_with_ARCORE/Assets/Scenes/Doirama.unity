@@ -947,6 +947,8 @@ GameObject:
   - component: {fileID: 446118874}
   - component: {fileID: 446118876}
   - component: {fileID: 446118877}
+  - component: {fileID: 446118879}
+  - component: {fileID: 446118878}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1011,6 +1013,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04fe844292615b408703d33dc23a291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 1498663086}
+--- !u!114 &446118878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446118873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff07861dffce8ea42856f92a22ef2d21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &446118879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446118873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc12c46f6f496834a9ab12db37b5d4f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFacingDown: 0
   camera: {fileID: 1498663086}
 --- !u!1 &473318346
 GameObject:
@@ -1734,7 +1762,7 @@ PrefabInstance:
     - target: {fileID: 6066745166337866646, guid: c76b51f752777224c9cb8a1319cf8514,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.65
+      value: 1.58
       objectReference: {fileID: 0}
     - target: {fileID: 6066745166337866646, guid: c76b51f752777224c9cb8a1319cf8514,
         type: 3}
@@ -1784,7 +1812,7 @@ PrefabInstance:
     - target: {fileID: 6066745166337866646, guid: c76b51f752777224c9cb8a1319cf8514,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.74
+      value: -0.78
       objectReference: {fileID: 0}
     - target: {fileID: 6066745166337866646, guid: c76b51f752777224c9cb8a1319cf8514,
         type: 3}
