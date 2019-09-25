@@ -8,6 +8,13 @@ public class Player : NetworkBehaviour
 {
     int count = 0;
 
+    [ClientRpc]
+    public void RpcPlayerConnected()
+    {
+        Debug.Log("Client Rpc Call.");
+    }
+
+    
     [Command]
     public void CmdTestFunction(int i)
     {
@@ -19,8 +26,8 @@ public class Player : NetworkBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             CmdTestFunction(count++);
-
             Debug.Log("Input A. " + count);
+            Debug.Log(NetworkManager.singleton.networkAddress);
         }
     }
 }
