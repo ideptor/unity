@@ -14,7 +14,7 @@ public class CustomNetworkManager : NetworkManager
         var players = FindObjectsOfType<Player>();
         foreach (var player in players)
         {
-            player.RpcPlayerConnected();
+            //player.RpcPlayerConnected();
         }
     }
 
