@@ -77,7 +77,7 @@ public class Player : NetworkBehaviour
                 if(isServer)
                 {
                     Debug.Log("server attack:");
-                    hp -= 3;
+                    this.hp -= 3;
                 } else if (isClient)
                 {
                     Debug.Log("client attack:");
