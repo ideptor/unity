@@ -7,14 +7,17 @@ public class NM_GameController : MonoBehaviour
 {
 
     public Text HPText;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+
 
     // Update is called once per frame
     void Update()
     {
-        
+        var player = FindObjectOfType<Player>();
+        if(HPText != null && player != null)
+        {
+            HPText.text = "HP: " + player.hp.ToString();
+        }
+            
+
     }
 }
