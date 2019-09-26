@@ -60,7 +60,7 @@ public class VideoController : MonoBehaviour
         WaitForSeconds waitTime = new WaitForSeconds(1.0f);
 
         while (!video.isPrepared)
-        {
+        {       
             Debug.Log("동영상 준비중...");
             yield return waitTime;
         }
@@ -78,9 +78,13 @@ public class VideoController : MonoBehaviour
 
         Debug.Log("동영상이 재생됩니다.");
 
+        video.time = video.time + 100; 
+
         while (video.time < video.length)
         {
-            Debug.Log("동영상 재생 시간 : " + Mathf.FloorToInt((float)video.time) + "/" + Mathf.FloorToInt((float)video.length));
+            //Debug.Log("동영상 재생 시간 : " + Mathf.FloorToInt((float)video.time) + "/" + Mathf.FloorToInt((float)video.length));
+            Debug.Log("동영상 재생 시간 : " + (float)video.time + "/" + Mathf.FloorToInt((float)video.length));
+            
             yield return null;
         }
         Debug.Log("영상이 끝났습니다.");
