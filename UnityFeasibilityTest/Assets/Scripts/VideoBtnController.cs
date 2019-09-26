@@ -20,14 +20,32 @@ public class VideoBtnController : MonoBehaviour
     public void OnPlayButtonClicked()
     {
         Debug.Log("OnPlayButtonClicked() - ");
-        var video = FindObjectOfType<VideoController>();
-        video.PlayVideo();
+
+        var player = FindObjectOfType<PlayerForVideoController>();
+        if(player.isServer) { 
+            var video = FindObjectOfType<VideoController>();
+            video.PlayVideo();
+            player.OnClickPlay();
+        } else
+        {
+            Debug.Log("Client cannot play");
+        }
     }
 
     public void OnPauseButtonClicked()
     {
         Debug.Log("OnPauseButtonClicked() - ");
-        var video = FindObjectOfType<VideoController>();
-        video.PauseVideo();
+        var player = FindObjectOfType<PlayerForVideoController>();
+
+        if (player.isServer)
+        {
+            var video = FindObjectOfType<VideoController>();
+            video.PauseVideo();
+            player.OnClickPause();
+        }
+        else
+        {
+            Debug.Log("Client cannot pause");
+        }
     }
 }
