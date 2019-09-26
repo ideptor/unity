@@ -2,23 +2,23 @@
 using UnityEngine;
 using UnityEngine.UI;
 using NUnit.Framework;
+using System;
 
-public class HeartTestsUnity
+public partial class HeartTestsUnity
 {
+   /*
+    private Image _image;
+    private Heart _heart;
 
-    public class TheReplenishMethod
+    [SetUp]
+    public void BeforeEveryTest()
     {
+        _image = new GameObject().AddComponent<Image>();
+        _heart = new Heart(_image);
+    }
 
-        private Image _image;
-        private Heart _heart;
-
-        [SetUp]
-        public void BeforeEveryTest()
-        {
-            _image = new GameObject().AddComponent<Image>();
-            _heart = new Heart(_image);
-        }
-        
+    public class TheReplenishMethod : HeartTestsUnity
+    {
         [Test]
         public void _0_Sets_Image_With_0_Fill_To_0_Percent_Fill()
         {
@@ -44,20 +44,52 @@ public class HeartTestsUnity
             Assert.AreEqual(0.5f, _image.fillAmount);
         }
 
-        public class Heart
+        [Test]
+        public void _Throws_Exception_For_Negative_Numbr_Of_Heart_Pieces()
         {
-            private const float FillPerHeartPiece = 0.25f;
-            private readonly Image _image;
+            Assert.Throws<ArgumentOutOfRangeException>(() => _heart.Replenish(-1));
+        }
 
-            public Heart(Image image)
-            {
-                this._image = image;
-            }
+    }
 
-            internal void Replenish(int numberOfHeartPieces)
-            {
-                _image.fillAmount += numberOfHeartPieces * FillPerHeartPiece;
-            }
+    public class TheDepleteMethod : HeartTestsUnity
+    {
+
+        [Test]
+        public void _0_Sets_Image_With_100_percent_Fill_To_100_percent_Fill()
+        {
+            _image.fillAmount = 1;
+
+            _heart.Deplete(0);
+
+            Assert.AreEqual(1, _image.fillAmount);
+        }
+
+        [Test]
+        public void _1_Sets_Image_With_100_Percent_Fill_To_75_Percent_Fill()
+        {
+            _image.fillAmount = 1;
+
+            _heart.Deplete(1);
+
+            Assert.AreEqual(0.75f, _image.fillAmount);
+        }
+
+        [Test] 
+        public void _2_Sets_Image_With_75_Percent_Fill_To_25_Percent_Fill()
+        {
+            _image.fillAmount = 0.75f;
+
+            _heart.Deplete(2);
+
+            Assert.AreEqual(0.25f, _image.fillAmount);
+        }
+
+        [Test]
+        public void _Throws_Exception_For_Negative_Numbr_Of_Heart_Pieces()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => _heart.Deplete(-1));
         }
     }
+    */
 }
