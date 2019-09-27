@@ -21,7 +21,14 @@ public class VideoBtnController : MonoBehaviour
     {
         Debug.Log("OnPlayButtonClicked() - ");
 
-        var player = FindObjectOfType<PlayerForVideoController>();
+        var player = FindObjectOfType<RemoteVideoController>();
+        if (player == null)
+        {
+            Debug.Log("Player is not ready");
+            return;
+        }
+            
+
         if(player.isServer) { 
             var video = FindObjectOfType<VideoController>();
             video.PlayVideo();
@@ -35,7 +42,7 @@ public class VideoBtnController : MonoBehaviour
     public void OnPauseButtonClicked()
     {
         Debug.Log("OnPauseButtonClicked() - ");
-        var player = FindObjectOfType<PlayerForVideoController>();
+        var player = FindObjectOfType<RemoteVideoController>();
 
         if (player.isServer)
         {
