@@ -6,7 +6,7 @@ using UnityEngine;
 public class VideoSyncManager : MonoBehaviour
 {
 
-    private const double SYNC_THRESHOLD_SECOND = 0.4;
+    private const double SYNC_THRESHOLD_SECOND = 0.2;
     private const float SYNC_INTERVAL = 0.1f;
     private float syncCount;
 
