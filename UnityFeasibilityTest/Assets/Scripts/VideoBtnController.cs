@@ -21,18 +21,18 @@ public class VideoBtnController : MonoBehaviour
     {
         Debug.Log("OnPlayButtonClicked() - ");
 
-        var player = FindObjectOfType<RemoteVideoController>();
-        if (player == null)
+        var remoteController = FindObjectOfType<RemoteVideoController>();
+        if (remoteController == null)
         {
-            Debug.Log("Player is not ready");
+            Debug.Log("remoteController is not ready");
             return;
         }
             
 
-        if(player.isServer) { 
+        if(remoteController.isServer) { 
             var video = FindObjectOfType<VideoController>();
             video.PlayVideo();
-            player.OnClickPlay();
+            remoteController.OnClickPlay();
         } else
         {
             Debug.Log("Client cannot play");
@@ -42,13 +42,18 @@ public class VideoBtnController : MonoBehaviour
     public void OnPauseButtonClicked()
     {
         Debug.Log("OnPauseButtonClicked() - ");
-        var player = FindObjectOfType<RemoteVideoController>();
+        var remoteController = FindObjectOfType<RemoteVideoController>();
+        if (remoteController == null)
+        {
+            Debug.Log("remoteController is not ready");
+            return;
+        }
 
-        if (player.isServer)
+        if (remoteController.isServer)
         {
             var video = FindObjectOfType<VideoController>();
             video.PauseVideo();
-            player.OnClickPause();
+            remoteController.OnClickPause();
         }
         else
         {
