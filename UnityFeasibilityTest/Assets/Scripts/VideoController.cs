@@ -58,18 +58,27 @@ public class VideoController : MonoBehaviour
         log += ", timediff:" + timeDiff;
         Debug.Log(log);
 
-        if (Math.Abs(timeDiff) < treshold)
+        if (video.playbackSpeed == 1)
         {
-            video.playbackSpeed = 1;
-            return;
-        }
+            if (Math.Abs(timeDiff) > treshold)
+            {
 
-        if (timeDiff > 0)
+                if (timeDiff > 0)
+                {
+                    video.playbackSpeed = 1.1f;
+                }
+                else
+                {
+                    video.playbackSpeed = 0.9f;
+                }
+            }
+        }
+        else
         {
-            video.playbackSpeed = 1.1f;
-        } else
-        {
-            video.playbackSpeed = 0.9f;
+            if (Math.Abs(timeDiff) < treshold / 2)
+            {
+                video.playbackSpeed = 1.0f;
+            }
         }
     }
 
