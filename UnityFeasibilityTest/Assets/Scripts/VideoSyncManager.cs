@@ -29,11 +29,25 @@ public class VideoSyncManager : MonoBehaviour
                 syncCount = SYNC_INTERVAL;
                 var localController = FindObjectOfType<VideoController>();
 
+                bool isPlaying = localController.IsPlaying();
+                SyncPlayStatus(isPlaying, remoteController);
+
                 double curTime = localController.getCurrentTime();
                 remoteController.Sync(curTime, DateTime.Now.Millisecond, SYNC_THRESHOLD_SECOND);
             }
 
         }
 
+    }
+
+    private void SyncPlayStatus(bool isPlaying, RemoteVideoController remoteController)
+    {
+        if(isPlaying)
+        {
+            remoteController.RpcPlay();
+        } else
+        {
+            remoteController.RpcPause();
+        }
     }
 }

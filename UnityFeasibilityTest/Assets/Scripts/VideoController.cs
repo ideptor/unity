@@ -50,12 +50,21 @@ public class VideoController : MonoBehaviour
         
     }
 
+    public bool IsPlaying()
+    {
+        if(video == null)
+        {
+            return false;
+        }
+        return video.isPlaying;
+    }
+
     internal void AdjustSpeedByTimeDiff(double timeDiff, double treshold)
     {
         String log = "AdjustSpeed - ";
         log += "playbackspeed:" + video.playbackSpeed.ToString("F1");
-        log += ", curtime:" + video.time;
-        log += ", timediff:" + timeDiff;
+        log += ", curtime:" + video.time.ToString("F2");
+        log += ", timediff:" + timeDiff.ToString("F2");
         Debug.Log(log);
 
         if (video.playbackSpeed == 1)
