@@ -54,7 +54,7 @@ namespace packt.FoodyGO.Mapping
                 worldCenterLocation.Longitude = gpsLocationService.Longitude;
                 print("GoogleMapTile refreshing map texture");
                 RefreshMapTile();
-            }
+            } 
 		}
 
 		public void RefreshMapTile() {
