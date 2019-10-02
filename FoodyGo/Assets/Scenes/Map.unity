@@ -309,9 +309,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 107389712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9f18e1306a8f794e98f111bef75984d, type: 3}
+  m_Script: {fileID: 11500000, guid: 730e2ebedbcb1454bab936020db50d9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gpsLocationService: {fileID: 163219170}
 --- !u!4 &107389718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce,
@@ -400,12 +401,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bfdcc793b1b7ce49a592039723808d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MapTileScale: 30
+  MapTileSizePixels: 640
+  MapTileZoomLevel: 17
+  Simulating: 1
+  StartCoordinates:
+    Latitude: 37.46659
+    Longitude: 127.0229
+  Rate: 5
+  SimulationOffsets:
+  - {x: -0.0003, y: 0}
+  - {x: -0.0008, y: 0}
+  - {x: -0.0008, y: 0}
+  - {x: -0.0003, y: 0}
+  - {x: -0.0001, y: 0}
   IsServiceStarted: 0
   Latitude: 0
   Longitude: 0
   Altitude: 0
   Accuracy: 0
   Timestamp: 0
+  PlayerTimestamp: 0
+  mapCenter:
+    Latitude: 0
+    Longitude: 0
+  mapWorldCenter: {x: 0, y: 0, z: 0}
+  mapScale: {x: 0, y: 0}
 --- !u!4 &174974603 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1848647987376963077, guid: 6e154019056684a4ba5747122360df0b,
