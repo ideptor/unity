@@ -96,16 +96,19 @@ namespace packt.FoodyGO.Mapping
 			BottomRightCorner.x = GoogleMapUtils.adjustLonByPixels(tileCenterLocation.Longitude, size, zoomLevel);
 			BottomRightCorner.y = GoogleMapUtils.adjustLatByPixels(tileCenterLocation.Latitude, -size, zoomLevel);
 
-            print(string.Format("Tile {0}x{1} requested with {2}", TileOffset.x, TileOffset.y, queryString));
+            //print(string.Format("Tile {0}x{1} requested with {2}", TileOffset.x, TileOffset.y, queryString));
+            Debug.Log(string.Format("Tile {0}x{1} requested with ({2},{3})", 
+                TileOffset.x, TileOffset.y, tileCenterLocation.Latitude.ToString("F2"), tileCenterLocation.Longitude.ToString("F2")));
 
-			var req = new WWW(url + "?" + queryString);
-            Debug.Log("req url:\n" + url + "?" + queryString);
-            Debug.Log("req url(fro req):\n" + req.url);
+
+            var req = new WWW(url + "?" + queryString);
+            //Debug.Log("req url:\n" + url + "?" + queryString);
+            //Debug.Log("req url(fro req):\n" + req.url);
 
             //var req = new WWW("https://maps.googleapis.com/maps/api/staticmap?center=50.917316,-114.080923&zoom=17&format=png&sensor=false&size=640x640&scale=2&maptype=roadmap&style=feature:landscape.man_made|visibility:on|invert_lightness:true");
             yield return req;
 			GetComponent<Renderer>().material.mainTexture = req.texture;
-            print(string.Format("Tile {0}x{1} textured", TileOffset.x, TileOffset.y));
+            Debug.Log(string.Format("Tile {0}x{1} textured", TileOffset.x, TileOffset.y));
         }
 	}
 }

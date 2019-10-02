@@ -15,7 +15,7 @@ namespace packt.FoodyGo.Services
 
         void Start()
         {
-            print("Starting GPSLocationService");
+            Debug.Log("Starting GPSLocationService");
             StartCoroutine(StartService());
         }
         IEnumerator StartService()
@@ -23,7 +23,7 @@ namespace packt.FoodyGo.Services
             // First, check if user has location service enabled
             if (!Input.location.isEnabledByUser)
             {
-                print("location not enabled by user, existing");
+                Debug.Log("location not enabled by user, existing");
                 yield break;
             }
 
@@ -41,22 +41,22 @@ namespace packt.FoodyGo.Services
             // Service didn't initialize in 20 seconds
             if (maxWait < 1)
             {
-                print("Timed out");
+                Debug.LogError("Timed out");
                 yield break;
             }
 
             // Connection has failed
             if (Input.location.status == LocationServiceStatus.Failed)
             {
-                print("Unable to determine device location.");
+                Debug.Log("Unable to determine device location.");
                 yield break;
             }
             else
             {
-                print("GSPLocationService started");
+                Debug.Log("GSPLocationService started");
                 IsServiceStarted = true;
                 // Access granted and location value could be retrieved
-                print("Location initialized at: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
+                Debug.Log("Location initialized at: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
             }
 
            
