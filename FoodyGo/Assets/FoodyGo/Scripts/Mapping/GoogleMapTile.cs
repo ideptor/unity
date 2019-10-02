@@ -16,7 +16,9 @@ namespace packt.FoodyGO.Mapping
 		}
 
 		//Google Maps API Staticmap URL
-		private const string GOOGLE_MAPS_URL = "http://maps.googleapis.com/maps/api/staticmap";
+		private const string GOOGLE_MAPS_URL = "https://maps.googleapis.com/maps/api/staticmap";
+
+        public string essential;
 
 		[Header("Map Settings")]
 		[Range(1,20)]
@@ -93,7 +95,7 @@ namespace packt.FoodyGO.Mapping
             queryString += "&style=element:geometry|invert_lightness:true|weight:3.1|hue:0x00ffd5";
             queryString += "&style=element:labels|visibility:off";
 
-            //queryString += "&key={your API key here}";
+            queryString += "&key="+ essential;
 
             //check if script is on a mobile device and using a location service 
             var usingSensor = false;

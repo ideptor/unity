@@ -515,6 +515,11 @@ PrefabInstance:
       propertyPath: gpsLocationService
       value: 
       objectReference: {fileID: 163219170}
+    - target: {fileID: 1848647987376963076, guid: 6e154019056684a4ba5747122360df0b,
+        type: 3}
+      propertyPath: essential
+      value: AIzaSyB_OeFqDWYcZ3IdJGpPk7LKzXEt7kQXiwk
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e154019056684a4ba5747122360df0b, type: 3}
 --- !u!1001 &239108133
@@ -599,6 +604,11 @@ PrefabInstance:
       propertyPath: gpsLocationService
       value: 
       objectReference: {fileID: 163219170}
+    - target: {fileID: 1848647987376963076, guid: 6e154019056684a4ba5747122360df0b,
+        type: 3}
+      propertyPath: essential
+      value: AIzaSyB_OeFqDWYcZ3IdJGpPk7LKzXEt7kQXiwk
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e154019056684a4ba5747122360df0b, type: 3}
 --- !u!1001 &296241033
@@ -656,6 +666,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 107389718}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
 --- !u!1 &363707274
@@ -816,6 +830,11 @@ PrefabInstance:
       propertyPath: gpsLocationService
       value: 
       objectReference: {fileID: 163219170}
+    - target: {fileID: 1848647987376963076, guid: 6e154019056684a4ba5747122360df0b,
+        type: 3}
+      propertyPath: essential
+      value: AIzaSyB_OeFqDWYcZ3IdJGpPk7LKzXEt7kQXiwk
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e154019056684a4ba5747122360df0b, type: 3}
 --- !u!1001 &568008757
@@ -900,6 +919,11 @@ PrefabInstance:
       propertyPath: gpsLocationService
       value: 
       objectReference: {fileID: 163219170}
+    - target: {fileID: 1848647987376963076, guid: 6e154019056684a4ba5747122360df0b,
+        type: 3}
+      propertyPath: essential
+      value: AIzaSyB_OeFqDWYcZ3IdJGpPk7LKzXEt7kQXiwk
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e154019056684a4ba5747122360df0b, type: 3}
 --- !u!4 &858644110 stripped
@@ -1053,6 +1077,11 @@ PrefabInstance:
       propertyPath: gpsLocationService
       value: 
       objectReference: {fileID: 163219170}
+    - target: {fileID: 1848647987376963076, guid: 6e154019056684a4ba5747122360df0b,
+        type: 3}
+      propertyPath: essential
+      value: AIzaSyB_OeFqDWYcZ3IdJGpPk7LKzXEt7kQXiwk
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e154019056684a4ba5747122360df0b, type: 3}
 --- !u!1001 &1689330577
@@ -1132,6 +1161,11 @@ PrefabInstance:
       propertyPath: gpsLocationService
       value: 
       objectReference: {fileID: 163219170}
+    - target: {fileID: 1848647987376963076, guid: 6e154019056684a4ba5747122360df0b,
+        type: 3}
+      propertyPath: essential
+      value: AIzaSyB_OeFqDWYcZ3IdJGpPk7LKzXEt7kQXiwk
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e154019056684a4ba5747122360df0b, type: 3}
 --- !u!4 &1738699677 stripped
@@ -1222,6 +1256,11 @@ PrefabInstance:
       propertyPath: gpsLocationService
       value: 
       objectReference: {fileID: 163219170}
+    - target: {fileID: 1848647987376963076, guid: 6e154019056684a4ba5747122360df0b,
+        type: 3}
+      propertyPath: essential
+      value: AIzaSyB_OeFqDWYcZ3IdJGpPk7LKzXEt7kQXiwk
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e154019056684a4ba5747122360df0b, type: 3}
 --- !u!1001 &1923852955
@@ -1278,6 +1317,10 @@ PrefabInstance:
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
+      propertyPath: m_MoveSpeedMultiplier
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11444856, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
@@ -1359,6 +1402,11 @@ PrefabInstance:
       propertyPath: gpsLocationService
       value: 
       objectReference: {fileID: 163219170}
+    - target: {fileID: 1848647987376963076, guid: 6e154019056684a4ba5747122360df0b,
+        type: 3}
+      propertyPath: essential
+      value: AIzaSyB_OeFqDWYcZ3IdJGpPk7LKzXEt7kQXiwk
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e154019056684a4ba5747122360df0b, type: 3}
 --- !u!1 &2035690047
@@ -1465,5 +1513,10 @@ PrefabInstance:
       propertyPath: gpsLocationService
       value: 
       objectReference: {fileID: 163219170}
+    - target: {fileID: 1848647987376963076, guid: 6e154019056684a4ba5747122360df0b,
+        type: 3}
+      propertyPath: essential
+      value: AIzaSyB_OeFqDWYcZ3IdJGpPk7LKzXEt7kQXiwk
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e154019056684a4ba5747122360df0b, type: 3}
