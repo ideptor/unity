@@ -90,6 +90,8 @@ namespace GoogleARCore.Examples.AugmentedImage
             Session.GetTrackables<AugmentedImage>(
                 m_TempAugmentedImages, TrackableQueryFilter.Updated);
 
+//Debug.Log("m_TempAugmentedImages:\n"+m_TempAugmentedImages);
+
             // Create visualizers and anchors for updated augmented images that are tracking and do
             // not previously have a visualizer. Remove visualizers for stopped images.
             foreach (var image in m_TempAugmentedImages)
@@ -100,9 +102,22 @@ namespace GoogleARCore.Examples.AugmentedImage
                 {
                     // Create an anchor to ensure that ARCore keeps tracking this augmented image.
                     Anchor anchor = image.CreateAnchor(image.CenterPose);
+Debug.Log("anchor:\n" + anchor);
+                    Debug.Log("anchor.GetInstanceID: "  + anchor.GetInstanceID());
+                    Debug.Log("anchor.transform: " + anchor.transform);
+                    Debug.Log("anchor.name: " + anchor.name);
+
+
                     visualizer = (AugmentedImageVisualizer)Instantiate(
                         AugmentedImageVisualizerPrefab, anchor.transform);
                     visualizer.Image = image;
+Debug.Log("image:\n"+image);
+                    Debug.Log("image.name:" + image.Name);
+                    Debug.Log("image.CenterPose: " + image.CenterPose);
+                    Debug.Log("image.ExtentX: " + image.ExtentX);
+                    Debug.Log("image.ExtentZ: " + image.ExtentZ);
+
+
                     m_Visualizers.Add(image.DatabaseIndex, visualizer);
                 }
                 else if (image.TrackingState == TrackingState.Stopped && visualizer != null)
