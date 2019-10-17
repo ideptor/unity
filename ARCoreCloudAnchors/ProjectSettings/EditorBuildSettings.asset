@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: f7c9c45c54fba8d4aa3d0ef407a39a86
-  - enabled: 1
+  - enabled: 0
     path: Assets/GoogleARCore/Examples/CloudAnchors/Scenes/CloudAnchors.unity
     guid: 83fb41cc294e74bdea57537befa00ffc
+  - enabled: 1
+    path: Assets/GoogleARCore/Examples/AugmentedImage/Scenes/AugmentedImage.unity
+    guid: be567d47d3ab94b3badc5b211f535a24
   m_configObjects: {}
